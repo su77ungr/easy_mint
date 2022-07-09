@@ -3,7 +3,7 @@
 
 ***
 > 0. Goals 
- * Creating .offer files for redemption tokens (i.e CATs) in exchange for an NFT
+ * Creating .offer files (NFT for CAT) 
  * Automates this task
 > 1. Prerequisites
  * Windows 11 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; for bash scripting
