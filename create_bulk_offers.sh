@@ -13,7 +13,7 @@ echo "your NFT IDs are stored in NFT_ID_LIST.txt"
 
 read -p "$(tput setaf 2)Do you want to continue with the auto creation of the offers? (yes/no) " yn
 case $yn in
-        yes ) proceed...;;
+        yes ) echo proceed...;;
         no ) echo exiting...;
                 exit;;
         * ) echo invalid response;
@@ -21,8 +21,8 @@ case $yn in
 esac
 
 for i in $(seq 1 $num); do
-./chia.exe wallet make_offer -f $finger -o $(sed -n ${i}p NFT_ID_LIST.txt | tail -c -64 | cut -c -62):1 -r $id2:$neu2 -p offers/$i.offer &&
-
+sleep 1
+yes | ./chia.exe wallet make_offer -f $finger -o $(sed -n ${i}p NFT_ID_LIST.txt | tail -c -64 | cut -c -62):1 -r $id2:$neu2 -p offers/$i.offer &&
 sleep 0.5
 done
 echo "$(tput setaf 3)loop closed ... your offers are saved in /offers ... Follow me on the twitter @chialisp"
