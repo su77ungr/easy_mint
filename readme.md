@@ -8,7 +8,7 @@
 > 1. Prerequisites
  * Windows 11 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; for bash scripting
  * Chia client >= 1.4.0 
- * NFT Collection in a seperate wallet
+ * NFT Collection in a separate wallet
  
 
 
