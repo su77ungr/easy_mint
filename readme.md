@@ -9,8 +9,7 @@
  * Chia client >= 1.4.0 
  * NFT Collection in a separate wallet
  
-
-
+<h1> </h1>
 
 
 > 2. Setting up your environment
@@ -21,7 +20,10 @@
  * run `git clone https://github.com/su77ungr/easy_mint.git` inside the ~/chia folder and  `cd easy_mint/`
  * run `sudo chmod +x create_bulk_offers.sh && mv create_bulk_offers.sh ~/chia`
 
- > 3. Everything should be ready to go!
+ 
+<h1> </h1>
+
+> 3. Everything should be ready to go!
 
  note your 
  *  `fingerprint`, 
