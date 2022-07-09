@@ -19,7 +19,7 @@
  * it’s a bit long winded when most of your frequently accessed files are located there. Thankfully, we can use symlinks
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * you can `cd ~/chia` to access your linked directory; run `./chia.exe -h` to test everything is working as it should 
- * run `git clone https://github.com/su77ungr/easy_mint.git` inside the ~/chia folder
+ * run `git clone https://github.com/su77ungr/easy_mint.git` inside the ~/chia folder and  `cd easy_mint`
  * run `sudo chmod +x create_bulk_offers.sh && mv create_bulk_offers.sh ~/chia`
 
  > 3. Everything should be ready to go!
