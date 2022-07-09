@@ -6,7 +6,7 @@
  * Creating .offer files for redemption tokens (CATs) in exchange for an NFT
  * Automates this task
 > 1. Prerequisites
- * I'm using Windows 10 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; to enable easy scripting with bash
+ * Windows 11 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; for easy scripting with bash
  * Chia client >= 1.4.0 
  * NFT Collection in a seperate wallet
  
