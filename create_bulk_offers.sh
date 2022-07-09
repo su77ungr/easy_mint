@@ -1,5 +1,5 @@
 #!/bin/bash
-read -p "what's your fingerprint (i.e 278xxxxxxxxx) - you can get it by ./chia.exe wallet show?" finger
+read -p "what's your fingerprint (i.e 278xxxxxxxxx)" finger
 read -p "what's your Wallet ID? (i.e 5)" id
 ./chia.exe wallet nft list -f $finger -i $id | grep "nft1" >> NFT_ID_LIST.txt
 echo "your NFT IDs are stored in NFT_ID_LIST.txt"
