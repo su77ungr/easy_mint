@@ -5,6 +5,8 @@ read -p "what's your Wallet ID for the tokens in exchange? (i.e 2) : " id2
 read -p "what's your NFT's royalty? (i.e 0.05 = 5%) : " roy; neu=$(echo "$roy+1" | bc); neu2=$(echo "scale=3 ; 1 / $neu" | bc)
 echo your royalty is $roy - ergo your exchange rate to token is $neu2 tokens
 read -p "how many offers do you want to create?" num
+echo ""
+echo "creating NFT ID list now ..."
 
 ./chia.exe wallet nft list -f $finger -i $id | grep "nft1" >> NFT_ID_LIST.txt
 echo "your NFT IDs are stored in NFT_ID_LIST.txt"
