@@ -4,8 +4,8 @@
 
 
 > <h3> 1. Prerequisites </h3>
- * For WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6 <a href="https://github.com/su77ungr/easy_mint/blob/da56b4ba2931cec8cc2deb2ba8dabf5476794300/create_bulk_offers_linux.sh">use create_bulk_offers.sh </a>
- * For native linux: <a href="https://github.com/su77ungr/easy_mint/blob/da56b4ba2931cec8cc2deb2ba8dabf5476794300/create_bulk_offers_linux.sh">use create_bulk_offers_linux.sh </a>
+ * For WSL (<a href="https://github.com/su77ungr/easy_mint/blob/da56b4ba2931cec8cc2deb2ba8dabf5476794300/create_bulk_offers_linux.sh"> Windows</a> Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6 
+ * For native linux: use <a href="https://github.com/su77ungr/easy_mint/blob/da56b4ba2931cec8cc2deb2ba8dabf5476794300/create_bulk_offers_linux.sh">create_bulk_offers_linux.sh </a>
  * Chia Client >= 1.4.0 
  * NFT Collection in a separate wallet
  
