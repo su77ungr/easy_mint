@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-get install bc -y &&
 read -p "Enter your fingerprint (i.e 278xxxxxxxxx) :" finger
 read -p "Wallet ID for the NFTs? (i.e 5) :" id
 read -p "Wallet ID for the token you request? (i.e 2) :" id2
