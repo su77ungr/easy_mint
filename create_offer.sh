@@ -14,7 +14,7 @@ case $yn in
 		exit 1;;
 esac
 
-creating offers ...
+echo "$(tput setaf 2) CREATING OFFERS NOW"
 
 for i in {1..9}; do 
 ./chia.exe wallet make_offer -f $finger -o $(sed -n ${i}p NFT_ID_LIST.txt | tail -c -64 | cut -c -62):1 -r 9:0.959692898273 -p offers/$i.offer &&
