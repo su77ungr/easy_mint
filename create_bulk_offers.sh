@@ -22,7 +22,8 @@ esac
 echo "$(tput setaf 2) CREATING OFFERS NOW"
 
 for i in $(seq 1 $num); do
-./chia.exe wallet make_offer -f $finger -o $(sed -n ${i}p NFT_ID_LIST.txt | tail -c -64 | cut -c -62):1 -r $id2:$roy2 -p offers/$i.offer &&
+./chia.exe wallet make_offer -f $finger -o $(sed -n ${i}p NFT_ID_LIST.txt | tail -c -64 | cut -c -62):1 -r $id2:$neu2 -p offers/$i.offer &&
+
 sleep 0.5
 done
 echo "$(tput setaf 3)loop closed ... thank you for using my script. Follow me on the twiiter @chialisp"
