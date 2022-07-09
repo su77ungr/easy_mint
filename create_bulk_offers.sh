@@ -4,8 +4,7 @@ read -p "what's your Wallet ID for the NFTs? (i.e 5)" id
 read -p "what's your Wallet ID for the tokens in exchange? (i.e 1)" id2
 read -p "what's your NFT's royalty? (i.e 0.05 = 5% / 0.69 = 69%)" roy
 echo your royalty is $roy
-read -p "what's your NFT's royalty? (i.e 0.05 = 5% / 0.69 = 69%)" roy; echo "$roy+1" | bc; neu=$(echo "$roy+1" | bc); echo $neu; echo "scale=3 ; 1 / $neu" | bc; 
-neu2=$(echo "scale=3 ; 1 / $neu" | bc)
+read -p "what's your NFT's royalty? (i.e 0.05 = 5% / 0.69 = 69%)" roy; neu=$(echo "$roy+1" | bc); neu2=$(echo "scale=3 ; 1 / $neu" | bc); echo $neu2
 
 read -p "how many offers do you want to create?" num
 
