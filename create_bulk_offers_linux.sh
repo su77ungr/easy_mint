@@ -1,15 +1,15 @@
 #!/bin/bash
 sudo apt-get install bc -y &&
 read -p "Enter your fingerprint (i.e 278xxxxxxxxx) :" finger
-read -p "Wallet ID for the NFTs? (i.e 5) :" id
-read -p "Wallet ID for the token you request? (i.e 2) :" id2
-read -p "NFT royalty? (i.e 0.05 = 5%) :" roy; neu=$(echo "$roy+1" | bc); neu2=$(echo "scale=3 ; 1 / $neu" | bc)
+read -p "Enter Wallet ID for the NFTs (i.e 5) :" id
+read -p "Enter Wallet ID for the TOKEN you request (i.e 2) :" id2
+read -p "Enter Wallet NFT royalty (i.e 0.05 = 5.0%) :" roy; neu=$(echo "$roy+1" | bc); neu2=$(echo "scale=3 ; 1 / $neu" | bc)
 echo your royalty is $roy - ergo your exchange rate to token is $neu2
 read -p "Amount of offers you want to create? :" num
 echo ""
-echo "creating NFT ID list now ..."
+echo "creating NFT_ID_LIST.txt now ..."
 chia wallet nft list -f $finger -i $id | grep "nft1" >> NFT_ID_LIST.txt
-echo "your NFT IDs are stored in NFT_ID_LIST.txt"
+echo "NFT IDs successfully stored in NFT_ID_LIST.txt"
 read -p "$(tput setaf 2)Do you want to start auto creating offers? (yes/no) " yn
 case $yn in
         yes ) echo proceed...;;
