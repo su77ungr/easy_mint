@@ -1,4 +1,3 @@
-Welcome to the easy_bulk_offers script!
 
 
 
@@ -7,7 +6,7 @@ Welcome to the easy_bulk_offers script!
  * I'm using Windows 10 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; to enable easy scripting with bash
  * Installed and ready version of the chia app-1.4.0
  * You already minted your NFT Collection and want to make offer files 
-
+ 
 
 
 
