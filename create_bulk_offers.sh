@@ -25,4 +25,4 @@ for i in $(seq 1 $num); do
 
 sleep 0.5
 done
-echo "$(tput setaf 3)loop closed ... thank you for using my script. Follow me on the twiiter @chialisp"
+echo "$(tput setaf 3)loop closed ... your offers are saved in /offers ... thank you for using my script. Follow me on the twiiter @chialisp"
