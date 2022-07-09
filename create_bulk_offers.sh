@@ -3,8 +3,12 @@ read -p "what's your fingerprint (i.e 278xxxxxxxxx)" finger
 read -p "what's your Wallet ID for the NFTs? (i.e 5)" id
 read -p "what's your Wallet ID for the tokens in exchange? (i.e 1)" id2
 read -p "what's your NFT's royalty? (i.e 0.05 = 5% / 0.69 = 69%)" roy
-roy2=1/$roy
+echo your royalty is $roy
+read -p "what's your NFT's royalty? (i.e 0.05 = 5% / 0.69 = 69%)" roy; echo "$roy+1" | bc; neu=$(echo "$roy+1" | bc); echo $neu; echo "scale=3 ; 1 / $neu" | bc; 
+neu2=$(echo "scale=3 ; 1 / $neu" | bc)
+
 read -p "how many offers do you want to create?" num
+
 
 
 
