@@ -1,5 +1,5 @@
 
-<h1> Automating the creation of .offer files (NFT for CAT)</h1>
+<h1> Automating .offer files (NFT for CAT)</h1>
 
 ***
 ***
