@@ -25,4 +25,4 @@
  > 3. Everything should be ready to go!
 
  * note your `fingerprint`, `wallet ID (NFT)`, `wallet ID (Token)` and enter it when requested by the script
- * run `sudo ./make_bulk_offers.sh`
+ * run `sudo ./make_bulk_offers.sh` inside ~/chia
