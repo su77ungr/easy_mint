@@ -1,10 +1,9 @@
 
-
+<h1> Automating the creation of .offer files (NFT for CAT)</h1>
 
 ***
-> 0. Goals 
- * Creating .offer files (NFT for CAT) 
- * Automates this task
+***
+
 > 1. Prerequisites
  * Windows 11 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; for bash scripting
  * Chia client >= 1.4.0 
@@ -31,5 +30,5 @@
  *  `Royalty (NFT)` and enter it when requested by the script
 
  run `sudo ./make_bulk_offers.sh` inside ~/chia
- * your offers will be stored inside `cd offers/`
+ * your offers will be stored inside `cd offers/` - you can upload them on https://dexie.space/upload
  * END OF README
