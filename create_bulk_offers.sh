@@ -12,7 +12,7 @@ echo "creating NFT ID list now ..."
 ./chia.exe wallet nft list -f $finger -i $id | grep "nft1" >> NFT_ID_LIST.txt
 echo "your NFT IDs are stored in NFT_ID_LIST.txt"
 
-read -p "$(tput setaf 2)Do you want to continue with the auto creation of the offers? (yes/no) " yn
+read -p "$(tput setaf 2)Do you want to start auto creating offers? (yes/no) " yn
 case $yn in
         yes ) echo proceed...;;
         no ) echo exiting...;
