@@ -33,5 +33,8 @@
 
  run `sudo ./make_bulk_offers.sh` inside ~/chia
  * your offers will be stored inside `cd offers/` - you can upload them on https://dexie.space/upload
- * END OF README
+ 
+ <h1> </h1>
+ 
+ END OF README
  
