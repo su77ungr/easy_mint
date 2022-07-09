@@ -4,8 +4,8 @@
 ***
 > 0. Prerequesites
  * I'm using Windows 10 with WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; to enable easy scripting with bash
- * Installed and ready version of the chia app-1.4.0
- * You already minted your NFT Collection and want to make offer files 
+ * Chia client >= 1.4.0 
+ * NFT Collection in a seperate wallet
  
 
 
