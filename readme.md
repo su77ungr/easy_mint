@@ -5,7 +5,7 @@
 
 > <h3> 1. Prerequisites </h3>
  * WSL (Windows Subsystem for Linux) https://www.microsoft.com/store/productId/9MSVKQC78PK6; for bash scripting
- * LINUX (use create_bulk_offers_linux.sh)
+ * LINUX <a href="https://github.com/su77ungr/easy_mint/blob/da56b4ba2931cec8cc2deb2ba8dabf5476794300/create_bulk_offers_linux.sh">use create_bulk_offers_linux.sh </a>
  * Chia Client >= 1.4.0 
  * NFT Collection in a separate wallet
  
