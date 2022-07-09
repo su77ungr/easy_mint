@@ -3,7 +3,7 @@ sudo apt-get install bc -y &&
 read -p "Enter your fingerprint (i.e 278xxxxxxxxx) :" finger
 read -p "Wallet ID for the NFTs? (i.e 5) :" id
 read -p "Wallet ID for the token you request? (i.e 2) :" id2
-read -p "NFT's royalty? (i.e 0.05 = 5%) :" roy; neu=$(echo "$roy+1" | bc); neu2=$(echo "scale=3 ; 1 / $neu" | bc)
+read -p "NFT royalty? (i.e 0.05 = 5%) :" roy; neu=$(echo "$roy+1" | bc); neu2=$(echo "scale=3 ; 1 / $neu" | bc)
 echo your royalty is $roy - ergo your exchange rate to token is $neu2
 read -p "Amount of offers you want to create? :" num
 echo ""
