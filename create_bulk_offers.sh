@@ -8,10 +8,8 @@ echo your royalty is $roy - ergo your exchange rate to token is $neu2
 read -p "Amount of offers you want to create? :" num
 echo ""
 echo "creating NFT ID list now ..."
-
 ./chia.exe wallet nft list -f $finger -i $id | grep "nft1" >> NFT_ID_LIST.txt
 echo "your NFT IDs are stored in NFT_ID_LIST.txt"
-
 read -p "$(tput setaf 2)Do you want to start auto creating offers? (yes/no) " yn
 case $yn in
         yes ) echo proceed...;;
@@ -20,10 +18,9 @@ case $yn in
         * ) echo invalid response;
                 exit 1;;
 esac
-
 for i in $(seq 1 $num); do
 sleep 1
 yes | ./chia.exe wallet make_offer -f $finger -o $(sed -n ${i}p NFT_ID_LIST.txt | tail -c -64 | cut -c -62):1 -r $id2:$neu2 -p offers/$i.offer &&
 sleep 0.5
 done
-echo "$(tput setaf 3)loop closed ... your offers are saved in /offers ... Follow me on the twitter @chialisp"
+echo "$(tput setaf 3)loop closed ... offers are saved in offers/  ... Please consider following me on the twitter @chialisp"
