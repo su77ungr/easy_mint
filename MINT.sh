@@ -2,11 +2,11 @@
 
 # NFT Images (images/) and NFT Metadata (metadata/) should be stored inside the easy_mint/ directory
 
-# URI storage link (i.e)
+# URI storage link (i.e with IPFS and your CID)
 URI=https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph 
 # URI local storage link (directory your files are stored in)
 FOLDER_NAME_URI=images                                                              
-# MURI storage link (i.e)
+# MURI storage link (i.e GITHUB repo)
 MURI=https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main              
 # URI local storage link (directory your files are stored in)
 FOLDER_NAME_MURI=metadata                                                            
