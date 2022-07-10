@@ -10,9 +10,9 @@
  
  > <h3> 2. Make list of hashes (URI/MURI) </h3>
  
- * run `./get_hashtable_uri.sh` generates a list of the hashed values of the image files 
- * run `./get_hashtable_metadata.sh`  generates a list of the hashed values of the  metadata files 
- * those are stored in `hashtable_URI.txt` and `hashtable_MURI.txt`
+ * enter your credentials inside `get_hashtables.sh` with `sudo nano get_hashtables.sh`
+ * run `./get_hashtables` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` 
+
  
  <h1></h1>
  
