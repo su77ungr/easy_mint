@@ -5,23 +5,15 @@
  * Images (preferably decentralized storage provider)
   <a href="https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph"> IPFS </a>
  * Chia Client >= 1.4.0 
+ * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
+ * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
  
  <h1></h1>
  
- > <h3> 2. Make list of hashes (URI/MURI) </h3>
+ > <h3> 2. Equip MINT.sh with your Credentials </h3>
  * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and `cd easy_mint/ && sudo chmod +x MINT.sh`
- * enter your credentials inside `get_hashtables.sh` with `sudo nanomint_hashtables.sh`
- * run `./mint_hashtables.sh` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` 
-
- 
- <h1></h1>
- 
- 
- > <h3> 3. Feed final MINT.sh </h3>
-  
- `./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i YOUR_WALLET_ID -ra YOUR_ADDRESS_FOR_ROYALTIES -ta YOUR_ADDRESS_RECEIVE -u $uri_default -nh $uri_hash -mu $metadata_default -mh $metadata_hash -sn $i -st SERIES_AMOUNT -sn SERIES_NUMBER -rp YOUR_ROYALTIES -m YOUR_FEE`
-
- add parameters inside ./bulk_mint.sh
+ * enter your credentials inside `MINT.sh` with `sudo MINT.sh`
+add credentials inside on top of the script 
  
  *  `-f FINGERPRINT`,  
  *  `-i WALLET_ID`,  
@@ -31,8 +23,11 @@
  *  `-sn SERIES_NUMBER` note: use ❗1 on the default if you don't want several copys of the same NFT,
  *  `-rp ROYALTIES (420 = 4.20%)`,
  *  `-m  FEE` 
-   
-  * run `sudo ./MINT.sh`
+
+ * run `MINT.sh` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` which are called in the mint function
+ * run `sudo ./MINT.sh`
+ 
+ <h1></h1>
 
 
 <h1> Automating .offer files (NFT <---> CAT)</h1>
