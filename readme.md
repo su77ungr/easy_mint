@@ -1,8 +1,8 @@
 <h1> Minting NFTs </h1>
  
  > <h3> 1. Prerequisites </h3>
- * Metadata in the <a href="https://github.com/Chia-Network/chips/blob/dc2e294b489ca0201a8e0f5ee9310650106bf7d2/assets/chip-0007/example.json"> CHIP-007 </a> format  (preferably decentralized storage provider) for this demo: <a href="https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json"> Raw Github </a>
- * Images (preferably decentralized storage provider) (in this example pinata.cloud) 
+ * Metadata in <a href="https://github.com/Chia-Network/chips/blob/dc2e294b489ca0201a8e0f5ee9310650106bf7d2/assets/chip-0007/example.json"> CHIP-0007 </a> format (JSON) (preferably decentralized storage provider) for this demo: <a href="https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json"> Raw Github </a>
+ * Images (preferably decentralized storage provider)
   <a href="https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph"> IPFS </a>
  * Chia Client >= 1.4.0 
  
@@ -27,7 +27,7 @@
  *  `-i YOUR_WALLET_ID`,  
  *  `-ra YOUR_ADDRESS_FOR_ROYALTIES`, 
  *  `-ta YOUR_ADDRESS_RECEIVE`,  
- *  `-st SERIES_AMOUNT`,
+ *  `-st SERIES_AMOUNT` note: should be one on the default,
  *  `-rp YOUR_ROYALTIES (420 = 4.20%)`,
  *  `-m YOUR_FEE` and enter it when requested by the script
    
