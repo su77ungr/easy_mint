@@ -1,0 +1,54 @@
+{
+  "format": "CHIP-0007",
+  "name": "[089] BRICKs",
+  "description": "Procedural art on chia-blockchain",
+  "sensitive_content": false,
+  "attributes": [
+    {
+      "trait_type": "Identification",
+      "value": "089/999"
+    },
+    {
+      "trait_type": "License",
+      "value": "All rights reserved"
+    },
+    {
+      "trait_type": "GENESIS_CAT_NAME",
+      "value": "BRICK"
+    },
+    {
+      "trait_type": "GENESIS_CAT_ASSET_ID",
+      "value": "a56b38245583e2014e24e01dfcc2d6a5a6b19c15110093eca14dfeda817aa2da"
+    },
+    {
+      "trait_type": "Artist",
+      "value": "SU77UNGR"
+    }
+  ],
+  "collection": {
+    "name": "BRICKs",
+    "id": "1x2qz0dtat3q5ym5n3x2a9zjk3nhp8dc2p338q5nsnjfgq73a23mq2vsx76",
+    "attributes": [
+      {
+        "type": "description",
+        "value": "A collection of unique BRICKs"
+      },
+      {
+        "type": "icon",
+        "value": "https://ipfs.io/ipfs/QmdjvCJS5xuWsDFWzfHP6twRgAuVjmnipJqf4h9fRwvVqF/420.png"
+      },
+      {
+        "type": "banner",
+        "value": "https://ipfs.io/ipfs/QmdjvCJS5xuWsDFWzfHP6twRgAuVjmnipJqf4h9fRwvVqF/420.png"
+      },
+      {
+        "type": "twitter",
+        "value": "@chialisp"
+      },
+      {
+        "type": "website",
+        "value": "https://bricks.wiki/"
+      }
+    ]
+  }
+}
