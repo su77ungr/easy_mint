@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# URI storage link (i.e): https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph/$i.png | would be:
+# URI storage link (i.e): https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph/69.png | you have to enter:
 URI=https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph
 
-# MURI storage link (i.e): https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata$i.json | would be:
+# MURI storage link (i.e): https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json | you have to enter: 
 MURI=https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main
 
 # Number of NFTs 
