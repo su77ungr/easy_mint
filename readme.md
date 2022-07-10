@@ -48,8 +48,8 @@
  
  > <h3> 2. Make list of hashes (URI/MURI) </h3>
  
- * run `./get_hashtable_uri.sh` inside it; you generated a list of the hashed values of the image files 
- * run `./get_hashtable_metadata.sh` inside it; you generated a list of the hashed values of the metadata files 
+ * run `./get_hashtable_uri.sh` generates a list of the hashed values of the image files 
+ * run `./get_hashtable_metadata.sh`  generates a list of the hashed values of the  metadata files 
  * those are stored in `hashtable_URI.txt` and `hashtable_MURI.txt`
  
  <h1></h1>
@@ -57,14 +57,17 @@
  
  > <h3> 3. Feed final bulk_mint script </h3>
   
+ `./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i YOUR_WALLET_ID -ra YOUR_ADDRESS_FOR_ROYALTIES -ta YOUR_ADDRESS_RECEIVE -u $uri_default -nh $uri_hash -mu $metadata_default -mh $metadata_hash -sn $i -st SERIES_AMOUNT -rp YOUR_ROYALTIES -m YOUR_FEE`
+
  add parameters inside ./bulk_mint.sh
  
- *  `-f fingerprint`,  
- *  `-ra address to receive royalties`, 
- *  `-ta address to send the collection`,  
- *  `-st Amount of NFT in Series`,
- *  `-rp Amount of Royalties (420 = 4.20%)`,
- *  `-m transaction fee` and enter it when requested by the script
+ *  `-f YOUR_FINGERPRINT`,  
+ *  `-i YOUR_WALLET_ID`,  
+ *  `-ra YOUR_ADDRESS_FOR_ROYALTIES`, 
+ *  `-ta YOUR_ADDRESS_RECEIVE`,  
+ *  `-st SERIES_AMOUNT`,
+ *  `-rp YOUR_ROYALTIES (420 = 4.20%)`,
+ *  `-m YOUR_FEE` and enter it when requested by the script
    
   * run `./bulk_mint.sh`
 
