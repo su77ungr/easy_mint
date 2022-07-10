@@ -13,6 +13,7 @@
  > <h3> 2. Equip MINT.sh with your Credentials </h3>
  * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and `cd easy_mint/ && sudo chmod +x MINT.sh`
  * note 
+ 
 add credentials inside with `sudo nano MINT.sh`
  
  *  `-f FINGERPRINT`,  
