@@ -67,8 +67,8 @@ URI_HASH=$(sed -n ${i}p hashtable_URI.txt); echo $URI_HASH
 echo MURI: $MURI/metadata$i.json
 MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt); echo $MURI_HASH
 
-echo "currently minting $i ..."
+echo $(tput setaf 7) "MINTING $i ..."
 sleep 2
-./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i 12 -ra YOUR_ADDRESS -ta YOUR_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 &&
+cd .. && ./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i 12 -ra YOUR_ADDRESS -ta YOUR_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
 sleep 53
 done
