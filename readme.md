@@ -36,5 +36,33 @@
  
  <h1> </h1>
  
+ <h1> Minting NFTs </h1>
+ 
+ > <h3> 1. Prerequisites </h3>
+ * Already generated Metadata in the CHIP-007 format and uploaded Images on a decentralized storage provider
+ * Already uploaded Images on a decentralized storage provider (in this example pinata.cloud) 
+ * Chia Client >= 1.4.0 
+ 
+ <h1> </h1>
+ 
+ >  <h3> 2. Make list of hashes (URI/MURI) </h3>
+ 
+ * run `./get_hashtable_uri.sh` inside it; you generated a list of the hashed values of the image files 
+ * run `./get_hashtable_metadata.sh` inside it; you generated a list of the hashed values of the metadata files 
+ * those are stored in `hashtable_URI.txt` and `hashtable_MURI.txt`
+ <h1> </h1>
+ > <h3> 3. Run final bulk script </h3>
+  
+ add parameters inside ./bulk_mint.sh
+ 
+ *  `-f fingerprint`,  
+ *  `-ra address to receive royalties`, 
+ *  `-ta address to send the collection`,  
+ *  `-st Amount of NFT in Series`,
+ *  `-rp Amount of Royalties (420 = 4.20%)`,
+ *  `-m transaction fee` and enter it when requested by the script
+   
+  * run `./bulk_mint.sh`
+
  END OF README
  
