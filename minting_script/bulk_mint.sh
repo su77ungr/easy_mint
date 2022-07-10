@@ -1,8 +1,7 @@
 #!/bin/bash
-for z in {1..999}
+for i in {1..999}
 do
 echo $i
-sleep 1
 uri_default=(https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph/$i.png)
 echo uri url: $uri_default
 uri_hash=$(sed -n ${i}p hashtable_URI.txt)
