@@ -10,8 +10,8 @@
  
  > <h3> 2. Make list of hashes (URI/MURI) </h3>
  
- * enter your credentials inside `get_hashtables.sh` with `sudo nano get_hashtables.sh`
- * run `./get_hashtables` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` 
+ * enter your credentials inside `get_hashtables.sh` with `sudo nanomint_hashtables.sh`
+ * run `./mint_hashtables.sh` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` 
 
  
  <h1></h1>
