@@ -16,7 +16,7 @@
  
 add credentials inside with `sudo nano MINT.sh`
  *  ` API_KEY`,  
- *  ` FORLDER_NAME_URI`, ` FORLDER_NAME_MURI`
+ *  ` FOLDER_NAME_URI`, ` FOLDER_NAME_MURI`
  *  `FINGERPRINT`,  `WALLET_ID`,  `ROYALTY_ADDRESS`,   `RECEIVE_ADDRESS`,  `NUM`
  * ~~`-st SERIES_AMOUNT`~~ note: don't use this flag ❗if you don't want several copys of the same NFT,
  * ~~`-sn SERIES_NUMBER`~~ note: don't use this flag ❗if you don't want several copys of the same NFT,
