@@ -15,7 +15,9 @@ NUM=9
 # Royalties (420 = 4.20%)
 ROYALTY=420                                                                         
 # Wallet's fingerprint
-FINGERPRINT=278XXXXXXX                                                              
+FINGERPRINT=278XXXXXXX 
+# Wallet's ID 
+WALLET_ID=12
 # Receive Address (royalties)
 ROYALTY_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq   
 # Receive address (NFTs)
@@ -73,6 +75,6 @@ MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt); echo $MURI_HASH
 
 echo $(tput setaf 7) "MINTING $i ..."
 sleep 2
-cd .. && ./chia.exe wallet nft mint -f $FINGERPRINT -i 12 -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
+cd .. && ./chia.exe wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
 sleep 53
 done
