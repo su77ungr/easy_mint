@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# NFT Images (images/) and NFT Metadata (metadata/) should be stored inside the easy_mint/ directory
+# Image files (images/) and Metadata files (metadata/) should be directories inside easy_mint/ 
 
 # URI storage link (i.e with IPFS and your CID)
 URI=https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph 
