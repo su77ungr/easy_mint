@@ -1,9 +1,9 @@
 <h1> Minting NFTs </h1>
  
  > <h3> 1. Prerequisites </h3>
- * Metadata in <a href="https://github.com/Chia-Network/chips/blob/dc2e294b489ca0201a8e0f5ee9310650106bf7d2/assets/chip-0007/example.json"> CHIP-0007 </a> format (JSON) (preferably decentralized storage provider) for this demo: <a href="https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json"> Raw Github </a>
- * Images (preferably decentralized storage provider)
-  <a href="https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph"> IPFS </a>
+ * Metadata in <a href="https://github.com/Chia-Network/chips/blob/dc2e294b489ca0201a8e0f5ee9310650106bf7d2/assets/chip-0007/example.json"> CHIP-0007 </a> format (JSON) demo: <a href="https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json"> Raw Github </a>
+ * Images (PNG format)
+ * NFT.STORAGE APIR get it <a href="https://nft.storage/"> here </a>
  * Chia Client >= 1.4.0 
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
