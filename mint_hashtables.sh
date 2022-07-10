@@ -13,6 +13,9 @@ FOLDER_NAME_MURI=metadata
 # Number of NFTs
 NUM=9
 
+# Number of NFTs (420 = 4.20%)
+ROYALTY=420
+
 for i in $(seq 1 $NUM);
 do
 sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.png | cut -c -64) &&
@@ -28,7 +31,6 @@ done
 echo $(tput setaf 7) "hashtable_URI.txt created successfully"
 
 # same procedure for the metadata
-
 for i in $(seq 1 $NUM);
 do
 sample1=$(sha256sum -b $FOLDER_NAME_MURI/metadata$i.json | cut -c -64) &&
@@ -42,3 +44,26 @@ echo $(tput setaf 1) DISMATCH at $i! $test2 --- $test3 >> hashtable_MURI.log
 fi
 done
 echo $(tput setaf 7) "hashtable_MURI.txt created successfully"
+echo ""
+echo $(tput setaf 7) "Everything is ready to mint"
+read -p "$(tput setaf 2)Do you want to start MINTING? (yes/no) " yn
+case $yn in
+        yes ) echo proceed...;;
+        no ) echo exiting...;
+                exit;;
+        * ) echo invalid response;
+                exit 1;;
+esac 
+for i in $(seq 1 $NUM);
+do
+echo $i
+echo uri url: $URI/$i.png
+URI_HASH=$(sed -n ${i}p hashtable_URI.txt)
+echo muri url: $MURI/metadata$i.json
+MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
+echo metadata hash: $metadata_hash
+echo "minting $i with $URI/$i.png / $MURI/metadata$i.json now"
+sleep 2
+./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i 12 -ra YOUR_ADDRESS -ta YOUR_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 &&
+sleep 53
+done
