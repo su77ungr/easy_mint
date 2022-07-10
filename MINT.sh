@@ -23,7 +23,6 @@ ROYALTY_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq
 # Receive address (NFTs)
 RECEIVE_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq      
 
-
 for i in $(seq 1 $NUM);
 do
 sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.png | cut -c -64) &&
@@ -38,7 +37,6 @@ fi
 done
 echo $(tput setaf 7) "hashtable_URI.txt created successfully"
 
-# same procedure for the metadata
 for i in $(seq 1 $NUM);
 do
 sample1=$(sha256sum -b $FOLDER_NAME_MURI/metadata$i.json | cut -c -64) &&
@@ -54,9 +52,6 @@ done
 echo $(tput setaf 7) "hashtable_MURI.txt created successfully"
 
 # starting final mint script 
-
-echo ""
-echo $(tput setaf 7) "Everything is ready to mint"
 read -p "$(tput setaf 2)Do you want to start MINTING? (yes/no) " yn
 case $yn in
         yes ) echo proceed...;;
@@ -65,16 +60,12 @@ case $yn in
         * ) echo invalid response;
                 exit 1;;
 esac 
+
 for i in $(seq 1 $NUM);
 do
-echo $i
-echo URI: $URI/$i.png
-URI_HASH=$(sed -n ${i}p hashtable_URI.txt); echo $URI_HASH
-echo MURI: $MURI/metadata$i.json
-MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt); echo $MURI_HASH
-
+URI_HASH=$(sed -n ${i}p hashtable_URI.txt)
+MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
 echo $(tput setaf 7) "MINTING $i ..."
-sleep 2
 cd .. && ./chia.exe wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
 sleep 53
 done
