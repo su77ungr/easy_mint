@@ -12,7 +12,7 @@ metadata_hash=$(sed -n ${i}p hashtable_MURI.txt)
 echo metadata hash: $metadata_hash
 echo "minting now ..."
 sleep 2
-./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i 12 -ra YOUR_ADDRESS -ta YOUR_ADDRESS -u $uri_default -nh $uri_hash -mu $metadata_default -mh $metadata_hash -sn $i -st 999 -rp 420 -m 0.000615 &&
+./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i 12 -ra YOUR_ADDRESS -ta YOUR_ADDRESS -u $uri_default -nh $uri_hash -mu $metadata_default -mh $metadata_hash -sn $i -st 1 -rp 420 -m 0.000615 &&
 sleep 53
 echo "minted $i"
 done
