@@ -12,7 +12,7 @@
 <h1> </h1>
 
 
->  <h3> 2. Setting up your environment</h3>
+> <h3> 2. Setting up your environment</h3>
  * with WSL path should be: /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon
  * to simplify this path, we can use symlinks
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
@@ -23,7 +23,7 @@
  
 <h1> </h1>
 
->  <h3> 3. Everything should be ready to go!</h3>
+> <h3> 3. Everything should be ready to go!</h3>
 
  note your 
  *  `fingerprint`, 
@@ -43,9 +43,9 @@
  * Already uploaded Images (preferably decentralized storage provider) (in this example pinata.cloud) 
  * Chia Client >= 1.4.0 
  
- <h1> </h1>
+ <h1></h1>
  
- >  <h3> 2. Make list of hashes (URI/MURI) </h3>
+ > <h3> 2. Make list of hashes (URI/MURI) </h3>
  
  * run `./get_hashtable_uri.sh` inside it; you generated a list of the hashed values of the image files 
  * run `./get_hashtable_metadata.sh` inside it; you generated a list of the hashed values of the metadata files 
