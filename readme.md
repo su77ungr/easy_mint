@@ -34,7 +34,7 @@
  run `sudo ./make_bulk_offers.sh` inside ~/chia
  * your offers will be stored inside `cd offers/` - you can upload them on https://dexie.space/upload
  
- <h1> </h1>
+ 
  
  <h1> Minting NFTs </h1>
  
@@ -50,8 +50,11 @@
  * run `./get_hashtable_uri.sh` inside it; you generated a list of the hashed values of the image files 
  * run `./get_hashtable_metadata.sh` inside it; you generated a list of the hashed values of the metadata files 
  * those are stored in `hashtable_URI.txt` and `hashtable_MURI.txt`
- <h1> </h1>
- > <h3> 3. Run final bulk script </h3>
+ 
+ <h1></h1>
+ 
+ 
+ > <h3> 3. Feed final bulk_mint script </h3>
   
  add parameters inside ./bulk_mint.sh
  
