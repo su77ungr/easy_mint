@@ -17,22 +17,22 @@
  <h1></h1>
  
  
- > <h3> 3. Feed final bulk_mint script </h3>
+ > <h3> 3. Feed final MINT.sh </h3>
   
  `./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i YOUR_WALLET_ID -ra YOUR_ADDRESS_FOR_ROYALTIES -ta YOUR_ADDRESS_RECEIVE -u $uri_default -nh $uri_hash -mu $metadata_default -mh $metadata_hash -sn $i -st SERIES_AMOUNT -sn SERIES_NUMBER -rp YOUR_ROYALTIES -m YOUR_FEE`
 
  add parameters inside ./bulk_mint.sh
  
- *  `-f YOUR_FINGERPRINT`,  
- *  `-i YOUR_WALLET_ID`,  
- *  `-ra YOUR_ADDRESS_FOR_ROYALTIES`, 
- *  `-ta YOUR_ADDRESS_RECEIVE`,  
+ *  `-f FINGERPRINT`,  
+ *  `-i WALLET_ID`,  
+ *  `-ra ROYALTY_ADDRESS`, 
+ *  `-ta RECEIVE_ADDRESS`,  
  *  `-st SERIES_AMOUNT` note: use ❗1 on the default if you don't want several copys of the same NFT,
  *  `-sn SERIES_NUMBER` note: use ❗1 on the default if you don't want several copys of the same NFT,
- *  `-rp YOUR_ROYALTIES (420 = 4.20%)`,
- *  `-m YOUR_FEE` 
+ *  `-rp ROYALTIES (420 = 4.20%)`,
+ *  `-m  FEE` 
    
-  * run `./bulk_mint.sh`
+  * run `sudo ./MINT.sh`
 
 
 <h1> Automating .offer files (NFT <---> CAT)</h1>
