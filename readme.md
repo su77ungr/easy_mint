@@ -39,7 +39,7 @@
  <h1> Minting NFTs </h1>
  
  > <h3> 1. Prerequisites </h3>
- * Already generated Metadata in the CHIP-007 format and uploaded files (preferably decentralized storage provider)
+ * Already generated Metadata in the <a href="https://github.com/Chia-Network/chips/blob/dc2e294b489ca0201a8e0f5ee9310650106bf7d2/assets/chip-0007/example.json"> CHIP-007 </a> format and uploaded files (preferably decentralized storage provider)
  * Already uploaded Images (preferably decentralized storage provider) (in this example pinata.cloud) 
  * Chia Client >= 1.4.0 
  
