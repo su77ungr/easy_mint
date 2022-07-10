@@ -11,7 +11,6 @@ API_KEY="{YOUR_API_KEY_FOR_NFT_STORAGE}"
 
 for i in $(seq 1 $NUM); do
 fname="./$FOLDER_NAME_URI/$i.png"
-
 response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
   -H "accept: application/json" \
   -H "Content-Type: image/*" \
@@ -27,19 +26,15 @@ sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) 
 if [ $sample1 == $sample2 ]
 then
 echo $(tput setaf 2) hashes match $(tput setaf 5) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
-echo $sample1 >> hashtable_URI.txt
-echo $URI >> table_URI.txt
+echo $sample1 >> hashtable_URI.txt; echo $URI >> table_URI.txt
 else
-echo $(tput setaf 1) DISMATCH at $i! $test2 --- $test3 >> hashtable_URI.log
+echo $(tput setaf 1) DISMATCH at $i! && echo $test2 --- $test3 >> hashtable_URI.log; exit 
 fi
 done
 echo $(tput setaf 7) "hashtable_URI.txt created successfully"
 
-# same for emtadata 
-
 for i in $(seq 1 $NUM); do
 fname="./$FOLDER_NAME_MURI/metadata$i.json"
-
 response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
   -H "accept: application/json" \
   -H "Content-Type: image/*" \
@@ -55,10 +50,9 @@ sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) 
 if [ $sample1 == $sample2 ]
 then
 echo $(tput setaf 2) hashes match $(tput setaf 5) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
-echo $sample1 >> hashtable_MURI.txt
-echo $URI >> table_MURI.txt
+echo $sample1 >> hashtable_MURI.txt; echo $URI >> table_MURI.txt
 else
-echo $(tput setaf 1) DISMATCH at $i! $test2 --- $test3 >> hashtable_MURI.log
+echo $(tput setaf 1) DISMATCH at $i! && echo $test2 --- $test3 >> hashtable_MURI.log; exit 
 fi
 done
 echo $(tput setaf 7) "hashtable_MURI.txt created successfully"
