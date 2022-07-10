@@ -9,7 +9,7 @@
  <h1></h1>
  
  > <h3> 2. Make list of hashes (URI/MURI) </h3>
- 
+ * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and `cd easy_mint/ && sudo chmod +x MINT.sh`
  * enter your credentials inside `get_hashtables.sh` with `sudo nanomint_hashtables.sh`
  * run `./mint_hashtables.sh` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` 
 
