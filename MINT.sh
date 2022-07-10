@@ -2,27 +2,25 @@
 
 # NFT Images (images/) and NFT Metadata (metadata/) should be stored inside the easy_mint/ directory
 
-# URI storage link (i.e): https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph/69.png | you>URI=https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph
-URI=https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph
-# URI local storage link (path to the directory where your images/files are stored)
-FOLDER_NAME_URI=images
-# MURI storage link (i.e): https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json | you have>MURI=https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main
-MURI=https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main
-# MURI local storage link (path to the directory where your metadata files are stored)
-FOLDER_NAME_MURI=metadata
-# Number of NFTs
-NUM=9
-# Number of NFTs (420 = 4.20%)
-ROYALTY=420
+# URI storage link (i.e)
+URI=https://gateway.pinata.cloud/ipfs/QmVxrncdNzefaZQAmvNsP3ovpQCvPrAzeuoVqDYFDEEeph 
+# URI local storage link (directory your files are stored in)
+FOLDER_NAME_URI=images                                                              
+# MURI storage link (i.e)
+MURI=https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main              
+# URI local storage link (directory your files are stored in)
+FOLDER_NAME_MURI=metadata                                                            
+# Number of NFTs to be minted
+NUM=9                                                                               
+# Royalties (420 = 4.20%)
+ROYALTY=420                                                                         
+# Wallet's fingerprint
+FINGERPRINT=278XXXXXXX                                                              
 # Receive Address (royalties)
-ROYALTY_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq
+ROYALTY_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq   
 # Receive address (NFTs)
-RECEIVE_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq
-###
-###
-# input field for credentials ends here 
-###
-###
+RECEIVE_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq      
+
 
 for i in $(seq 1 $NUM);
 do
@@ -75,6 +73,6 @@ MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt); echo $MURI_HASH
 
 echo $(tput setaf 7) "MINTING $i ..."
 sleep 2
-cd .. && ./chia.exe wallet nft mint -f YOUR_FINGERPRINT -i 12 -ra YOUR_ADDRESS -ta YOUR_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
+cd .. && ./chia.exe wallet nft mint -f $FINGERPRINT -i 12 -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
 sleep 53
 done
