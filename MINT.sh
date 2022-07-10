@@ -23,8 +23,7 @@ ROYALTY_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq
 # Receive address (NFTs)
 RECEIVE_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq      
 
-for i in $(seq 1 $NUM);
-do
+for i in $(seq 1 $NUM); do
 sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.png | cut -c -64) &&
 sample2=$(curl -s $URI/$i.png | sha256sum | cut -c -64) &&
 if [ $sample1 == $sample2 ]
@@ -37,8 +36,7 @@ fi
 done
 echo $(tput setaf 7) "hashtable_URI.txt created successfully"
 
-for i in $(seq 1 $NUM);
-do
+for i in $(seq 1 $NUM); do
 sample1=$(sha256sum -b $FOLDER_NAME_MURI/metadata$i.json | cut -c -64) &&
 sample2=$(curl -s $MURI/metadata$i.json | sha256sum | cut -c -64) &&
 if [ $sample1 == $sample2 ]
@@ -61,11 +59,10 @@ case $yn in
                 exit 1;;
 esac 
 
-for i in $(seq 1 $NUM);
-do
+for i in $(seq 1 $NUM); do
 URI_HASH=$(sed -n ${i}p hashtable_URI.txt)
 MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
 echo $(tput setaf 7) "MINTING $i ..."
-cd .. && ./chia.exe wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -sn 1 -st 1 -rp $ROYALTY -m 0.000615 && cd easy_mint/
+cd .. && ./chia.exe wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI/$i.png -nh $URI_HASH -mu  $MURI/metadata$i.json -mh $MURI_HASH -rp $ROYALTY -m 0.000615 && cd easy_mint/
 sleep 53
 done
