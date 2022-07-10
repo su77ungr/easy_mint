@@ -27,7 +27,7 @@
  *  `-i YOUR_WALLET_ID`,  
  *  `-ra YOUR_ADDRESS_FOR_ROYALTIES`, 
  *  `-ta YOUR_ADDRESS_RECEIVE`,  
- *  `-st SERIES_AMOUNT` note: should be one on the default,
+ *  `-st SERIES_AMOUNT` note: should be ❗1 on the default,
  *  `-rp YOUR_ROYALTIES (420 = 4.20%)`,
  *  `-m YOUR_FEE` and enter it when requested by the script
    
