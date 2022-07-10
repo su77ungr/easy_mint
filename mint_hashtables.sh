@@ -11,7 +11,7 @@ MURI=https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main
 FOLDER_NAME_MURI=metadata
 
 # Number of NFTs 
-NUM=999
+NUM=99
 
 for i in $(seq 1 $NUM);
 do
