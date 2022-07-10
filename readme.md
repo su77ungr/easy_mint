@@ -21,7 +21,7 @@ add credentials inside on top of the script
  *  `-ta RECEIVE_ADDRESS`,  
  * ~~`-st SERIES_AMOUNT`~~ note: don't use this flag ❗if you don't want several copys of the same NFT,
  * ~~`-sn SERIES_NUMBER`~~ note: don't use this flag ❗if you don't want several copys of the same NFT,
- *  `-rp ROYALTIES (420 = 4.20%)`,
+ *  `-rp ROYALTY (420 = 4.20%)`,
  *  `-m  FEE` 
 
  * run `MINT.sh` generates two .txt files: `hashtable_URI.txt` and `hashtable_MURI.txt` which are called in the mint function
