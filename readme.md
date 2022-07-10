@@ -19,8 +19,8 @@ add credentials inside on top of the script
  *  `-i WALLET_ID`,  
  *  `-ra ROYALTY_ADDRESS`, 
  *  `-ta RECEIVE_ADDRESS`,  
- * ~~`-st SERIES_AMOUNT`~~ note: use ❗1 on the default if you don't want several copys of the same NFT,~~
- * ~~`-sn SERIES_NUMBER`~~ note: use ❗1 on the default if you don't want several copys of the same NFT,
+ * ~~`-st SERIES_AMOUNT`~~ note: don't use this flag ❗if you don't want several copys of the same NFT,
+ * ~~`-sn SERIES_NUMBER`~~ note: don't use this flag ❗if you don't want several copys of the same NFT,
  *  `-rp ROYALTIES (420 = 4.20%)`,
  *  `-m  FEE` 
 
