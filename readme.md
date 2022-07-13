@@ -1,10 +1,16 @@
-<h1> Automating .offer files</h1>
+<h1> Utility to automate creating .offer files</h1>
 
 
 
 > <h3> 1. Prerequisites </h3>
  * Synced chia client >= 1.4.0 
  * NFTs / CATs inside a known wallet
+
+note your 
+ *  `fingerprint`, 
+ *  `wallet ID (NFT)`, 
+ *  `wallet ID (Token)`,
+ *  `Royalty (NFT)` and enter it when requested by the script
  
 <h1> </h1>
 
@@ -18,25 +24,21 @@
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
  * use the create_bulk_offers.sh script for the next steps instead of create_bulk_offers_linux.sh❗
+ * in step 2 run `sudo chmod +x create_bulk_offers_linux.sh && mv create_bulk_offers.sh` instead ❗
 
 </details>
 <br>
 
 > <h3> 2. Setting up your environment</h3>
 
- * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and  `cd easy_mint/`
- * run `sudo chmod +x create_bulk_offers_linux.sh && mv create_bulk_offers_linux.sh ~/chia`
+ * run `git clone https://github.com/su77ungr/easy_mint.git` inside your chia directory and `cd easy_mint/`
+ * run `sudo chmod +x create_bulk_offers_linux.sh`
 
  
 <h1> </h1>
 
 > <h3> 3. Everything should be ready to go!</h3>
 
- note your 
- *  `fingerprint`, 
- *  `wallet ID (NFT)`, 
- *  `wallet ID (Token)`,
- *  `Royalty (NFT)` and enter it when requested by the script
 
  run `sudo ./make_bulk_offers_linux.sh`
  
