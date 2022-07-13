@@ -23,8 +23,8 @@ note your
  * to simplify this path, we can use symlinks
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
- * use the create_bulk_offers.sh script for the next steps instead of create_bulk_offers_linux.sh❗
- * in step 2 run `sudo chmod +x create_bulk_offers_linux.sh && mv create_bulk_offers.sh` instead ❗
+ * use the *create_bulk_offers.sh* script for the next steps instead of create_bulk_offers_linux.sh❗
+
 
 </details>
 <br>
