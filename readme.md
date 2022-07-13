@@ -6,7 +6,7 @@
  * NFTs / CATs inside a known wallet
 
 note your 
- *  `fingerprint` (get it by  `chia keys show`), 
+ *  `fingerprint`, 
  *  `wallet ID (NFT)`, 
  *  `wallet ID (Token)`,
  *  `Royalty (NFT)` and enter it when requested by the script
