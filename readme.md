@@ -1,3 +1,59 @@
+<h1> Automating .offer files</h1>
+
+
+
+> <h3> 1. Prerequisites </h3>
+ * Synced chia client >= 1.4.0 
+ * NFTs / CATs inside a known wallet
+ 
+<h1> </h1>
+
+<details>
+<summary><h3>  ❗ WINDOWS users - read dropdown! </h3> </summary>
+
+
+ * For <a href="https://www.microsoft.com/store/productId/9MSVKQC78PK6"> WSL </a> (Windows Subsystem for Linux) use: <a href="https://github.com/su77ungr/easy_mint/blob/main/create_bulk_offers.sh">create_bulk_offers.sh </a>
+ * with WSL path should be: /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon
+ * to simplify this path, we can use symlinks
+ * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
+ * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
+ * use the create_bulk_offers.sh script for the next steps instead of create_bulk_offers_linux.sh❗
+
+</details>
+<br>
+
+> <h3> 2. Setting up your environment</h3>
+
+ * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and  `cd easy_mint/`
+ * run `sudo chmod +x create_bulk_offers_linux.sh && mv create_bulk_offers_linux.sh ~/chia`
+
+ 
+<h1> </h1>
+
+> <h3> 3. Everything should be ready to go!</h3>
+
+ note your 
+ *  `fingerprint`, 
+ *  `wallet ID (NFT)`, 
+ *  `wallet ID (Token)`,
+ *  `Royalty (NFT)` and enter it when requested by the script
+
+ run `sudo ./make_bulk_offers_linux.sh`
+ 
+ * your offers will be stored inside `cd offers/` - you can upload them onto https://dexie.space/upload
+ 
+ <br><br>
+
+
+
+
+
+
+
+
+
+
+
 <h1> Minting NFTs (uploading, hashing and minting) </h1>
  
  > <h3> 1. Prerequisites </h3>
@@ -23,45 +79,8 @@ add credentials inside with `sudo nano MINT.sh`
  * ~~`-sn SERIES_NUMBER`~~ note: don't use this flag ❗if you don't want several copys of the same NFT
 
 run `sudo ./MINT.sh`
+
+
+<br><br>
  
- <h1></h1>
-
-
-<h1> Automating .offer files</h1>
-
-
-
-> <h3> 1. Prerequisites </h3>
- * For <a href="https://www.microsoft.com/store/productId/9MSVKQC78PK6"> WSL </a> (Windows Subsystem for Linux) use: <a href="https://github.com/su77ungr/easy_mint/blob/main/create_bulk_offers.sh">create_bulk_offers.sh </a>
- * For native linux use: <a href="https://github.com/su77ungr/easy_mint/blob/main/create_bulk_offers_linux.sh">create_bulk_offers_linux.sh </a>
- * Chia Client >= 1.4.0 
- * NFT Collection in a separate wallet
- 
-<h1> </h1>
-
-
-> <h3> 2. Setting up your environment</h3>
- * with WSL path should be: /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon
- * to simplify this path, we can use symlinks
- * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
- * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
- * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and  `cd easy_mint/`
- * run `sudo chmod +x create_bulk_offers.sh && mv create_bulk_offers.sh ~/chia`
-
- 
-<h1> </h1>
-
-> <h3> 3. Everything should be ready to go!</h3>
-
- note your 
- *  `fingerprint`, 
- *  `wallet ID (NFT)`, 
- *  `wallet ID (Token)`,
- *  `Royalty (NFT)` and enter it when requested by the script
-
- run `sudo ./make_bulk_offers.sh` inside ~/chia
- * your offers will be stored inside `cd offers/` - you can upload them on https://dexie.space/upload
- 
- <h1> </h1>
- END OF README
  
