@@ -8,8 +8,8 @@
 note your 
  *  `fingerprint`, 
  *  `wallet ID (NFT)`, 
- *  `wallet ID (Token)`,
- *  `Royalty (NFT)` and enter it when requested by the script
+ *  `wallet ID (CAT)`,
+ *  `Royalty of the NFT` and enter it when requested by the script
  
 <h1> </h1>
 
