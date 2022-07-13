@@ -1,6 +1,5 @@
 <h1> Utility to automate creating .offer files</h1>
-
-
+<br><br>
 
 > <h3> 1. Prerequisites </h3>
  * Synced chia client >= 1.4.0 
@@ -42,7 +41,7 @@ note your
 
  * run `sudo ./make_bulk_offers_linux.sh` and enter your credentials 
  
- * .offer files will be stored inside `cd offers/` - you can upload them onto https://dexie.space/upload
+ * .offer files will be stored inside `offers/` - you can upload them onto https://dexie.space/upload
  
  <br><br>
 
