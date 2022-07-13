@@ -1,4 +1,4 @@
-<h1> Utility to automate creating .offer files</h1>
+<h1> Automate creating .offer files <a href="chia_automate_offer"> t </a> </h1>
 <br>
 
 > <h3> 1. Prerequisites </h3>
