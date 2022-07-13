@@ -101,10 +101,8 @@ add credentials inside with `sudo nano MINT.sh`
 run `sudo ./MINT.sh`
 <br> 
 
-and type yes to start minting to the blockchain 
 
-![image](https://user-images.githubusercontent.com/69374354/178788021-a93714e0-e760-4cd2-ac6b-c18d843ab0a7.png)
-
+![image](https://user-images.githubusercontent.com/69374354/178788335-8dd3b4a4-a9cb-478b-9ecd-9bd5e848fc6b.png)
 
 <br><br>
  
