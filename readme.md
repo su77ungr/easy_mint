@@ -40,9 +40,9 @@ note your
 > <h3> 3. Everything should be ready to go!</h3>
 
 
- run `sudo ./make_bulk_offers_linux.sh` and enter your credentials 
+ * run `sudo ./make_bulk_offers_linux.sh` and enter your credentials 
  
- * your offers will be stored inside `cd offers/` - you can upload them onto https://dexie.space/upload
+ * .offer files will be stored inside `cd offers/` - you can upload them onto https://dexie.space/upload
  
  <br><br>
 
