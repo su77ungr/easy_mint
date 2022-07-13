@@ -1,8 +1,7 @@
 #!/bin/bash
-#example; should be inside chia_automate_minting/
-#images have to be named 1.PNG, 2.PNG ... 1377.PNG
+#images should be named 1.PNG, 2.PNG ... 1377.PNG and stored inside images/
 FOLDER_NAME_URI="images"    
-#metadata files have to be named 1.JSON, 2.JSON ... 1377.JSON
+#metadata files should be named 1.JSON, 2.JSON ... 1377.JSON and stored inside metadata/
 FILE_TYPE_OF_IMAGES="png" #could be jpg, jpeg too
 #example
 FOLDER_NAME_MURI="metadata"
