@@ -102,7 +102,11 @@ run `sudo ./MINT.sh`
 <br> 
 
 
-![image](https://user-images.githubusercontent.com/69374354/178788335-8dd3b4a4-a9cb-478b-9ecd-9bd5e848fc6b.png)
+
+https://user-images.githubusercontent.com/69374354/178807850-3b1d48a5-88a2-4c6c-a1ad-fb098ad780a9.mp4
+
+
+
 
 <br><br>
  
