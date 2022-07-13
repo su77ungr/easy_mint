@@ -80,7 +80,8 @@ note your
  <h1></h1>
  
  > <h3> 2. Equip MINT.sh with your Credentials </h3>
- * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and `cd easy_mint/ && sudo chmod +x MINT.sh`
+ * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and `cd easy_mint/chia_automate_minting
+ * run `sudo chmod +x MINT.sh`
  <details>
 <summary><h3>  ❗ WINDOWS users - read dropdown! </h3> </summary>
 
