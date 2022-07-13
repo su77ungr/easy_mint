@@ -30,8 +30,7 @@ response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
   --data-binary "@$fname"`
 
 cid=`echo $response | jq -r '.value.cid'`
-URI="https://${cid}.ipfs.nftstorage.link" &&
-echo $URI
+URI="https://${cid}.ipfs.nftstorage.link"
 
 sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.png | cut -c -64) &&
 sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
@@ -39,8 +38,9 @@ if [ $sample1 == $sample2 ]
 then
 echo $(tput setaf 2) hashes match $(tput setaf 5) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
 echo $sample1 >> hashtable_URI.txt; echo $URI >> table_URI.txt
+echo $URI
 else
-echo $(tput setaf 1) DISMATCH at $i! && echo $test2 --- $test3 >> hashtable_URI.log; exit 
+echo $(tput setaf 1)HASHES DISMATCH at $i! Probably missing files && echo $test2 --- $test3 >> hashtable_URI.log; echo "Are your credentials right? read https://github.com/su77ungr/easy_mint" ; exit 
 fi
 done
 echo $(tput setaf 7) "hashtable_URI.txt created successfully"
