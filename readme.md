@@ -1,4 +1,4 @@
-<h1> Automate creating .offer files <a href="chia_automate_offer"> t </a> </h1>
+<h1> Automate creating .offer files <a href="https://github.com/su77ungr/easy_mint/tree/main/chia_automate_offers"> click </a> </h1>
 <br>
 
 > <h3> 1. Prerequisites </h3>
@@ -55,7 +55,7 @@ note your
 
 
 
-<h1> Minting NFTs (uploading, hashing and minting) </h1>
+<h1> Minting helper <a href="https://github.com/su77ungr/easy_mint/tree/main/chia_automate_minting"> click </a> </h1>
 <br>
  
  > <h3> 1. Prerequisites </h3>
