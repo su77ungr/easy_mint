@@ -17,6 +17,8 @@ ROYALTY_ADDRESS="<ADDRESS>"
 RECEIVE_ADDRESS="<ADDRESS>"
 #example
 API_KEY="<YOUR_API_KEY"
+#example
+FEE=0.000615
 
 ###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
 ############################################
@@ -57,7 +59,7 @@ echo $(tput setaf 7) "hashtable_URI.txt created successfully"
 echo $(tput setaf 7) "table_URI.txt created successfully"
 
 for i in $(seq 1 $NUM); do
-fname="./$FOLDER_NAME_MURI/metadata$i.json"
+fname="./$FOLDER_NAME_MURI/$i.json"
 response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
   -H "accept: application/json" \
   -H "Content-Type: image/*" \
@@ -68,7 +70,7 @@ cid=`echo $response | jq -r '.value.cid'`
 URI="https://${cid}.ipfs.nftstorage.link" &&
 echo $URI
 
-sample1=$(sha256sum -b $FOLDER_NAME_MURI/metadata$i.json | cut -c -64) &&
+sample1=$(sha256sum -b $FOLDER_NAME_MURI/$i.json | cut -c -64) &&
 sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 if [ $sample1 == $sample2 ]
 then
@@ -99,6 +101,6 @@ MURI=$(sed -n ${i}p table_MURI.txt)
 MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
 
 echo $(tput setaf 7) "MINTING $i ..."
-chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI -nh $URI_HASH -mu  $MURI -mh $MURI_HASH -rp $ROYALTY -m 0.000615 &&
+chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI -nh $URI_HASH -mu  $MURI -mh $MURI_HASH -rp $ROYALTY -m $FEE &&
 sleep 66
 done
