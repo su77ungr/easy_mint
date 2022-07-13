@@ -56,6 +56,7 @@ note your
 
 
 <h1> Minting NFTs (uploading, hashing and minting) </h1>
+<br><br>
  
  > <h3> 1. Prerequisites </h3>
  * Metadata in <a href="https://github.com/Chia-Network/chips/blob/dc2e294b489ca0201a8e0f5ee9310650106bf7d2/assets/chip-0007/example.json"> CHIP-0007 </a> format (JSON) demo: <a href="https://raw.githubusercontent.com/bricksofchia/NFT1_metadata/main/metadata69.json"> here  </a>
