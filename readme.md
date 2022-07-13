@@ -85,7 +85,7 @@ note your
  <details>
 <summary><h3>  ❗ WINDOWS users - read dropdown! </h3> </summary>
 
- * `sudo nano MINT.sh` and exchange command  `chia to ./chia.exe wallet nft ..` to  `./chia.exe wallet nft ...`  (line 77)  ❗
+ * `sudo nano MINT.sh` change line 77 into  `cd  ~/chia && ./chia.exe wallet nft ... && cd /easy_mint/chia_automate_minting &&`  (line 77)  ❗
 
 
 </details>
