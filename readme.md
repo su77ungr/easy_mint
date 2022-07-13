@@ -18,8 +18,8 @@ note your
 <summary><h3>  ❗ WINDOWS users - read dropdown! </h3> </summary>
 
 
- * For <a href="https://www.microsoft.com/store/productId/9MSVKQC78PK6"> WSL </a> (Windows Subsystem for Linux) use: <a href="https://github.com/su77ungr/easy_mint/blob/main/create_bulk_offers.sh">create_bulk_offers.sh </a>
- * with WSL path should be: /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon
+ * Install <a href="https://www.microsoft.com/store/productId/9MSVKQC78PK6"> WSL </a> (Windows Subsystem for Linux) and enter chia directory
+ * with WSL path should be: `/mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon`
  * to simplify this path, we can use symlinks
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
@@ -40,7 +40,7 @@ note your
 > <h3> 3. Everything should be ready to go!</h3>
 
 
- run `sudo ./make_bulk_offers_linux.sh`
+ run `sudo ./make_bulk_offers_linux.sh` and enter your credentials 
  
  * your offers will be stored inside `cd offers/` - you can upload them onto https://dexie.space/upload
  
