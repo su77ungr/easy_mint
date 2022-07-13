@@ -16,7 +16,7 @@ ROYALTY_ADDRESS="<ADDRESS>"
 #example
 RECEIVE_ADDRESS="<ADDRESS>"
 #example
-API_KEY="<YOUR_API_KEY_FOR_NFT_STORAGE>"
+API_KEY="<YOUR_API_KEY"
 
 ###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
 ############################################
@@ -31,6 +31,15 @@ response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
 
 cid=`echo $response | jq -r '.value.cid'`
 URI="https://${cid}.ipfs.nftstorage.link"
+BUG="null"
+
+if [ $cid == $BUG ]
+then
+echo $(tput setaf 1)"INVALID API_KEY - now exiting"
+exit
+else
+echo "API_KEY fine"
+fi
 
 sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.png | cut -c -64) &&
 sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
