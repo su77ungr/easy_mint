@@ -86,8 +86,15 @@ done
 echo $(tput setaf 7) "hashtable_MURI.txt created successfully"
 echo $(tput setaf 7) "table_MURI.txt created successfully"
 
+URI=$(sed -n ${i}p table_URI.txt)
+URI_HASH=$(sed -n ${i}p hashtable_URI.txt)
+MURI=$(sed -n ${i}p table_MURI.txt)
+MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
+
 
 # starting final mint script 
+echo "chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI -nh $URI_HASH -mu  $MURI -mh $MURI_HASH -rp $ROYALTY -m $FEE"
+echo "This will be your final mint command" 
 read -p "$(tput setaf 2)Do you want to start MINTING? (yes/no) " yn
 case $yn in
         yes ) echo proceed...;;
@@ -98,10 +105,6 @@ case $yn in
 esac 
 
 for i in $(seq 1 $NUM); do
-URI=$(sed -n ${i}p table_URI.txt)
-URI_HASH=$(sed -n ${i}p hashtable_URI.txt)
-MURI=$(sed -n ${i}p table_MURI.txt)
-MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
 
 echo $(tput setaf 7) "MINTING $i ..."
 chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI -nh $URI_HASH -mu  $MURI -mh $MURI_HASH -rp $ROYALTY -m $FEE &&
