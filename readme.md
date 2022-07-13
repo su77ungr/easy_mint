@@ -72,7 +72,7 @@ note your
  * to simplify this path, we can use symlinks
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
- * inside MINT.sh exchange command (line 77) with `chia to ./chia.exe wallet nft mint` i.e  `chia wallet nft mint` to  `./chia.exe wallet nft mint`  ❗
+ * inside MINT.sh exchange command (line 77) with `chia to ./chia.exe wallet nft ..` to  `*./chia.exe* wallet nft ...`  ❗
 
 
 </details>
