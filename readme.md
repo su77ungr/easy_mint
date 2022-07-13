@@ -83,7 +83,7 @@ note your
  <details>
 <summary><h3>  ❗ WINDOWS users - read dropdown! </h3> </summary>
 
- * inside MINT.sh exchange command (line 77) with `chia to ./chia.exe wallet nft ..` to  `*./chia.exe* wallet nft ...`  ❗
+ * `sudo nano MINT.sh` and exchange command  `chia to ./chia.exe wallet nft ..` to  `./chia.exe wallet nft ...`  (line 77)  ❗
 
 
 </details>
