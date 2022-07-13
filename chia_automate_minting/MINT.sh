@@ -52,7 +52,9 @@ else
 echo $(tput setaf 1)HASHES DISMATCH at $i! Probably missing files && echo $test2 --- $test3 >> hashtable_URI.log; echo "Are your credentials right? read https://github.com/su77ungr/easy_mint" ; exit 
 fi
 done
+
 echo $(tput setaf 7) "hashtable_URI.txt created successfully"
+echo $(tput setaf 7) "table_URI.txt created successfully"
 
 for i in $(seq 1 $NUM); do
 fname="./$FOLDER_NAME_MURI/metadata$i.json"
@@ -77,6 +79,8 @@ echo $(tput setaf 1) DISMATCH at $i! && echo $test2 --- $test3 >> hashtable_MURI
 fi
 done
 echo $(tput setaf 7) "hashtable_MURI.txt created successfully"
+echo $(tput setaf 7) "table_MURI.txt created successfully"
+
 
 # starting final mint script 
 read -p "$(tput setaf 2)Do you want to start MINTING? (yes/no) " yn
