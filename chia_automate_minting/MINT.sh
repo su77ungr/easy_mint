@@ -1,13 +1,25 @@
 #!/bin/bash
-FOLDER_NAME_URI=images                                                              
-FOLDER_NAME_MURI=metadata                                                            
-NUM=9                                                                               
-ROYALTY=420                                                                         
-FINGERPRINT=278XXXXXXX 
+#example 
+FOLDER_NAME_URI="images"    
+#example
+FOLDER_NAME_MURI="metadata"
+#example
+NUM=9     
+#example
+ROYALTY=420  
+#example
+FINGERPRINT="<FINGERPRINT>"
+#example
 WALLET_ID=12
-ROYALTY_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq   
-RECEIVE_ADDRESS=txch1srfpkw8rfcxzt37the4xtunld5en4ac5mp92duxerlpf2t4u9rhqyv4pfq  
-API_KEY="{YOUR_API_KEY_FOR_NFT_STORAGE}"
+#example
+ROYALTY_ADDRESS="<ADDRESS>"   
+#example
+RECEIVE_ADDRESS="<ADDRESS>"
+#example
+API_KEY="<YOUR_API_KEY_FOR_NFT_STORAGE>"
+
+###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
+############################################
 
 for i in $(seq 1 $NUM); do
 fname="./$FOLDER_NAME_URI/$i.png"
@@ -75,5 +87,5 @@ MURI_HASH=$(sed -n ${i}p hashtable_MURI.txt)
 
 echo $(tput setaf 7) "MINTING $i ..."
 chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $URI -nh $URI_HASH -mu  $MURI -mh $MURI_HASH -rp $ROYALTY -m 0.000615 &&
-sleep 53
+sleep 66
 done
