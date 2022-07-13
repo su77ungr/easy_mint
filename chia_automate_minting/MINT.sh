@@ -50,7 +50,7 @@ sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES | cut -c -64) &&
 sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 if [ $sample1 == $sample2 ]
 then
-echo $(tput setaf 2) hashes match $(tput setaf 5) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
+echo $(tput setaf 2) hashes match $(tput setaf 7) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
 echo $sample1 >> hashtable_URI.txt; echo $URI >> table_URI.txt
 echo $URI
 else
@@ -77,7 +77,7 @@ sample1=$(sha256sum -b $FOLDER_NAME_MURI/$i.json | cut -c -64) &&
 sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 if [ $sample1 == $sample2 ]
 then
-echo $(tput setaf 2) hashes match $(tput setaf 5) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
+echo $(tput setaf 2) hashes match $(tput setaf 7) NFT Nr. $i ${sample1:0:5}...  ${sample2:0:5}...
 echo $sample1 >> hashtable_MURI.txt; echo $URI >> table_MURI.txt
 else
 echo $(tput setaf 1) DISMATCH at $i! && echo $test2 --- $test3 >> hashtable_MURI.log; exit 
