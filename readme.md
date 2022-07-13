@@ -72,7 +72,6 @@ note your
  * to simplify this path, we can use symlinks
  * run `sudo ln -s /mnt/{STORAGE}/Users/{USER}/AppData/Local/chia-blockchain/app-1.4.0/resources/app.asar.unpacked/daemon ~/chia`
  * `cd ~/chia` to access the newly linked directory; run `./chia.exe -h` to test everything is working as it should 
- * inside MINT.sh exchange command (line 77) with `chia to ./chia.exe wallet nft ..` to  `*./chia.exe* wallet nft ...`  ❗
 
 
 </details>
@@ -81,7 +80,13 @@ note your
  
  > <h3> 2. Equip MINT.sh with your Credentials </h3>
  * run `git clone https://github.com/su77ungr/easy_mint.git` inside it and `cd easy_mint/ && sudo chmod +x MINT.sh`
- * note 
+ <details>
+<summary><h3>  ❗ WINDOWS users - read dropdown! </h3> </summary>
+
+ * inside MINT.sh exchange command (line 77) with `chia to ./chia.exe wallet nft ..` to  `*./chia.exe* wallet nft ...`  ❗
+
+
+</details>
  
 add credentials inside with `sudo nano MINT.sh`
  *  ` API_KEY`,  
