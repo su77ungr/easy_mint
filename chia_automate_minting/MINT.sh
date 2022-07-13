@@ -1,7 +1,7 @@
 #!/bin/bash
-#example 
+#example; should be inside chia_automate_minting/
 FOLDER_NAME_URI="images"    
-#example
+#example; be inside chia_automate_minting/
 FOLDER_NAME_MURI="metadata"
 #example
 NUM=9     
