@@ -27,7 +27,7 @@ FEE=0.000615
 ############################################
 
 for i in $(seq 1 $NUM); do
-fname="./$FOLDER_NAME_URI/$.$FILE_TYPE_OF_IMAGES"
+fname="./$FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES"
 response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
   -H "accept: application/json" \
   -H "Content-Type: image/*" \
