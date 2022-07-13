@@ -30,7 +30,7 @@ note your
 
 > <h3> 2. Setting up your environment</h3>
 
- * run `git clone https://github.com/su77ungr/easy_mint.git` inside your chia directory and `cd easy_mint/`
+ * run `git clone https://github.com/su77ungr/easy_mint.git` inside your chia directory and `cd easy_mint/chia_automate_offers`
  * run `sudo chmod +x create_bulk_offers_linux.sh`
 
  
