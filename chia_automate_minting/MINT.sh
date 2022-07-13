@@ -1,7 +1,10 @@
 #!/bin/bash
 #example; should be inside chia_automate_minting/
+#images have to be named 1.PNG, 2.PNG ... 1377.PNG
 FOLDER_NAME_URI="images"    
-#example; be inside chia_automate_minting/
+#metadata files have to be named 1.JSON, 2.JSON ... 1377.JSON
+FILE_TYPE_OF_IMAGES="png" #could be jpg, jpeg too
+#example
 FOLDER_NAME_MURI="metadata"
 #example
 NUM=9     
@@ -16,7 +19,7 @@ ROYALTY_ADDRESS="<ADDRESS>"
 #example
 RECEIVE_ADDRESS="<ADDRESS>"
 #example
-API_KEY="<YOUR_API_KEY"
+API_KEY="<YOUR_API_KEY>"
 #example
 FEE=0.000615
 
@@ -24,7 +27,7 @@ FEE=0.000615
 ############################################
 
 for i in $(seq 1 $NUM); do
-fname="./$FOLDER_NAME_URI/$i.png"
+fname="./$FOLDER_NAME_URI/$.$FILE_TYPE_OF_IMAGES"
 response=`curl -s -X 'POST' "https://api.nft.storage/upload" \
   -H "accept: application/json" \
   -H "Content-Type: image/*" \
@@ -43,7 +46,7 @@ else
 echo "API_KEY fine"
 fi
 
-sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.png | cut -c -64) &&
+sample1=$(sha256sum -b $FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES | cut -c -64) &&
 sample2=$(curl -s https://${cid}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 if [ $sample1 == $sample2 ]
 then
