@@ -36,7 +36,7 @@ cid1=`echo $response1 | jq -r '.value.cid'`
 URI1="https://${cid1}.ipfs.nftstorage.link"
 
 #uploads metadata onto nft.storage
-fname2="./$FOLDER_NAME_MURI/metadata$i.json"
+fname2="./$FOLDER_NAME_MURI/$i.json"
 response2=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@$fname2" --stderr -);
 cid2=`echo $response2 | jq -r '.value.cid'`
 URI2="https://${cid2}.ipfs.nftstorage.link" &&
@@ -44,7 +44,7 @@ URI2="https://${cid2}.ipfs.nftstorage.link" &&
 #hashes local files 
 sample1_URI=$(sha256sum -b $FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES | cut -c -64) &&
 sample2_URI=$(curl -s https://${cid1}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
-sample1_MURI=$(sha256sum -b $FOLDER_NAME_MURI/metadata$i.json | cut -c -64) &&
+sample1_MURI=$(sha256sum -b $FOLDER_NAME_MURI/$i.json | cut -c -64) &&
 sample2_MURI=$(curl -s https://${cid2}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 
 #compares locally hashed files with the hash of uploaded files _ must be the same 
