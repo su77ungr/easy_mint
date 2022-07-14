@@ -34,7 +34,7 @@ API_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE3N2VGNT
 ###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
 ############################################
 
-for i in $(seq 2 $NUM); do
+for i in $(seq 1 $NUM); do
 #uploads images onto nft.storage
 response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_URI/$IMAGE_NAME$i.$IMAGE_SUFFIX" --stderr -);
 cid1=`echo $response1 | jq -r '.value.cid'`
@@ -70,7 +70,7 @@ case $yn in
         * ) echo exiting...; exit 1;;
 esac 
 #minting to the blockchain 
-for i in $(seq 2 $NUM); do echo $(tput setaf 7)"MINTING $i ...";
+for i in $(seq 1 $NUM); do echo $(tput setaf 7)"MINTING $i ...";
 echo "RUNNING: chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $(sed -n ${i}p table_URI.txt) -nh $(sed -n ${i}p hashtable_URI.txt) -mu $(sed -n ${i}p table_MURI.txt) -mh $(sed -n ${i}p hashtable_MURI.txt) -rp $ROYALTY -m $FEE"
 echo "IF SOMETHING SEEMS WRONG; HIT CTRL+C"; sleep 5
 chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $(sed -n ${i}p table_URI.txt) -nh $(sed -n ${i}p hashtable_URI.txt) -mu $(sed -n ${i}p table_MURI.txt) -mh $(sed -n ${i}p hashtable_MURI.txt) -rp $ROYALTY -m $FEE &&
