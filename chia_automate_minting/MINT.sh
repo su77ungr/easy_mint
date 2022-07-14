@@ -39,13 +39,13 @@ response2=$(curl -s -X POST https://api.nft.storage/upload -H "accept: applicati
 cid2=`echo $response2 | jq -r '.value.cid'`
 URI2="https://${cid2}.ipfs.nftstorage.link" &&
 
-#hashes local files 
+#hashes files (locally stored / online stored)
 sample1_URI=$(sha256sum -b $FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES | cut -c -64) &&
 sample2_URI=$(curl -s https://${cid1}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 sample1_MURI=$(sha256sum -b $FOLDER_NAME_MURI/$i.json | cut -c -64) &&
 sample2_MURI=$(curl -s https://${cid2}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 
-#compares locally hashed files with the hash of uploaded files _ must be the same 
+#compares hashes
 if [ $sample1_URI == $sample2_URI ] && [ $sample1_MURI == $sample2_MURI ]
 then
 echo $sample1_URI >> hashtable_URI.txt; echo $URI1 >> table_URI.txt
@@ -63,7 +63,7 @@ case $yn in
         yes ) echo proceed...;;
         * ) echo exiting...; exit 1;;
 esac 
-# minting to the blockchain 
+#minting to the blockchain 
 for i in $(seq 1 $NUM); do echo $(tput setaf 7)"MINTING $i ...";
 echo "RUNNING: chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $(sed -n ${i}p table_URI.txt) -nh $(sed -n ${i}p hashtable_URI.txt) -mu $(sed -n ${i}p table_MURI.txt) -mh $(sed -n ${i}p hashtable_MURI.txt) -rp $ROYALTY -m $FEE"
 chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $(sed -n ${i}p table_URI.txt) -nh $(sed -n ${i}p hashtable_URI.txt) -mu $(sed -n ${i}p table_MURI.txt) -mh $(sed -n ${i}p hashtable_MURI.txt) -rp $ROYALTY -m $FEE &&
