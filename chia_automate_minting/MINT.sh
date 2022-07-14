@@ -12,17 +12,17 @@ NUM=9
 #Royalty (420=4.20%)
 ROYALTY=420  
 #example
-FINGERPRINT=""
+FINGERPRINT="<enterhere>"
 #your nft wallet's ID
 WALLET_ID=12
 #receive address for the royalties 
-ROYALTY_ADDRESS=""   
+ROYALTY_ADDRESS="<enterhere>"   
 #receive address which the NFTs get sent to after minting 
-RECEIVE_ADDRESS=""
+RECEIVE_ADDRESS="<enterhere>"
 #fee for every mint (0.0000615 XCH per NFT)
 FEE=0.000615 
 #example
-API_KEY=""
+API_KEY="<enterhere>"
 
 ###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
 ############################################
