@@ -30,14 +30,12 @@ API_KEY=""
 
 for i in $(seq 1 $NUM); do
 #uploads images onto nft.storage
-fname1="./$FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES"
-response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@$fname1" --stderr -);
+response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES" --stderr -);
 cid1=`echo $response1 | jq -r '.value.cid'`
-URI1="https://${cid1}.ipfs.nftstorage.link"
+URI1="https://${cid1}.ipfs.nftstorage.link" &&
 
 #uploads metadata onto nft.storage
-fname2="./$FOLDER_NAME_MURI/$i.json"
-response2=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@$fname2" --stderr -);
+response2=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_MURI/$i.json" --stderr -);
 cid2=`echo $response2 | jq -r '.value.cid'`
 URI2="https://${cid2}.ipfs.nftstorage.link" &&
 
@@ -52,7 +50,7 @@ if [ $sample1_URI == $sample2_URI ] && [ $sample1_MURI == $sample2_MURI ]
 then
 echo $sample1_URI >> hashtable_URI.txt; echo $URI1 >> table_URI.txt
 echo $sample1_MURI >> hashtable_MURI.txt; echo $URI2 >> table_MURI.txt
-echo "NFT DATA Nr. $i"
+echo -e "NFT DATA Nr. $i\n"
 echo $(tput setaf 2)HASHES MATCH$(tput setaf 7) URI : ${sample1_URI:0:7} --- ${sample2_URI:0:7}  --- ${URI1}
 echo $(tput setaf 2)HASHES MATCH$(tput setaf 7) MURI: ${sample1_MURI:0:7} --- ${sample2_MURI:0:7} --- ${URI2}
 else
@@ -66,8 +64,7 @@ case $yn in
         * ) echo exiting...; exit 1;;
 esac 
 # minting to the blockchain 
-for i in $(seq 1 $NUM); do echo $(tput setaf 7) "MINTING $i ...";
+for i in $(seq 1 $NUM); do echo $(tput setaf 7)"MINTING $i ...";
 echo "RUNNING: chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $(sed -n ${i}p table_URI.txt) -nh $(sed -n ${i}p hashtable_URI.txt) -mu $(sed -n ${i}p table_MURI.txt) -mh $(sed -n ${i}p hashtable_MURI.txt) -rp $ROYALTY -m $FEE"
-chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $(sed -n ${i}p table_URI.txt) -nh $(sed -n ${i}p hashtable_URI.txt) -mu $(sed -n ${i}p table_MURI.txt) -mh $(sed -n ${i}p hashtable_MURI.txt) -rp $ROYALTY -m $FEE" &&
-sleep 66
+sleep 1
 done
