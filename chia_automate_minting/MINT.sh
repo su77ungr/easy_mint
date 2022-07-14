@@ -29,7 +29,7 @@ RECEIVE_ADDRESS="txch1zgyhkjf90ducz0y35fsxsx48cc0k6zjzcpyj5zj0g0v8una6f9us6xg62l
 #EXAMPLE fee for every mint (0.0000615 XCH per NFT) 
 FEE=0.000615 
 #EXAMPLE api_key for nft.storage
-API_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE3N2VGNTMwMWQzZTQ0Mzg0MzhCNjNFMmVlRDI0OTI2QkU3ZDA3MjgiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1NzQ2NTgwNjA1NSwibmFtZSI6Im1pbnQifQ.Cmc8U82mDx5A7y6dQyEabDk13d7IDKYYdrZnA5A2kQk"
+API_KEY="eyJhbG......."
 
 ###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
 ############################################
