@@ -2,24 +2,24 @@
 ###        INPUT YOUR CREDENTIALS        ### 
 ############################################
 
-FILE_TYPE_OF_IMAGES="png" #could be jpg, jpeg too
-#named 1.PNG, 2.PNG ... 1377.PNG and stored inside images/
+FILE_TYPE_OF_IMAGES="png" #could be jpg, jpeg too example
+#named 1.PNG, 2.PNG ... 1377.PNG and stored inside images/ example
 FOLDER_NAME_URI="images"    
-#named 1.JSON, 2.JSON ... 1377.JSON and stored inside metadata/
+#named 1.JSON, 2.JSON ... 1377.JSON and stored inside metadata/ example
 FOLDER_NAME_MURI="metadata"
-#Number of NFTs to mint
+#Number of NFTs to mint example
 NUM=9     
-#Royalty (420=4.20%)
+#Royalty (420=4.20%) example
 ROYALTY=420  
 #example
-FINGERPRINT="<enterhere>"
+FINGERPRINT="1518460169"
 #your nft wallet's ID
 WALLET_ID=12
-#receive address for the royalties 
-ROYALTY_ADDRESS="<enterhere>"   
-#receive address which the NFTs get sent to after minting 
-RECEIVE_ADDRESS="<enterhere>"
-#fee for every mint (0.0000615 XCH per NFT)
+#receive address for the royalties example
+ROYALTY_ADDRESS="txch1zgyhkjf90ducz0y35fsxsx48cc0k6zjzcpyj5zj0g0v8una6f9us6xg62l"   
+#receive address which the NFTs get sent to after minting example
+RECEIVE_ADDRESS="txch1zgyhkjf90ducz0y35fsxsx48cc0k6zjzcpyj5zj0g0v8una6f9us6xg62l"
+#fee for every mint (0.0000615 XCH per NFT) example
 FEE=0.000615 
 #example
 API_KEY="<enterhere>"
