@@ -58,13 +58,12 @@ echo $(tput setaf 2)HASHES MATCH$(tput setaf 7) MURI: ${sample1_MURI:0:7} --- ${
 else
 echo $(tput setaf 1)HASHES DISMATCH at $i! "check credentials!" && echo NFT Nr. $i $URI1 - $sample_URI ; $URI2 - $sample_MURI >> minting.log; exit 
 fi; done
-echo "" 
-echo -e "CHECK your credentials! \n Fingerprint: $FINGERPRINT\n Wallet ID: $WALLET_ID\n Receive addrss (Royalties): $ROYALTY_ADDRESS\n Receive address (NFTs): $RECEIVE_ADDRESS\n Royalty (420=4.20%): $ROYALTY\n Fee: $FEE\n Amount to be minted: $NUM\n"
+
+echo "" && echo -e "CHECK your credentials! \n Fingerprint: $FINGERPRINT\n Wallet ID: $WALLET_ID\n Receive addrss (Royalties): $ROYALTY_ADDRESS\n Receive address (NFTs): $RECEIVE_ADDRESS\n Royalty (420=4.20%): $ROYALTY\n Fee: $FEE\n Amount to be minted: $NUM\n"
 read -p "$(tput setaf 2)Do you want to start MINTING? (yes/ press anything else to exit) " yn
 case $yn in
         yes ) echo proceed...;;
-        * ) echo exiting...;
-                exit 1;;
+        * ) echo exiting...; exit 1;;
 esac 
 # minting to the blockchain 
 for i in $(seq 1 $NUM); do echo $(tput setaf 7) "MINTING $i ...";
