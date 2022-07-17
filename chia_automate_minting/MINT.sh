@@ -2,28 +2,28 @@
  
 ###        INPUT YOUR CREDENTIALS        ### 
 ############################################
-
-FILE_TYPE_OF_IMAGES="png" #could be jpg, jpeg too
-#named 1.PNG, 2.PNG ... 1377.PNG and stored inside images/
+#EXAMPLE could be jpg, jpeg too 
+IMAGE_SUFFIX="png"
+#EXAMPLE
 FOLDER_NAME_URI="images"    
-#named 1.JSON, 2.JSON ... 1377.JSON and stored inside metadata/
+#EXAMPLE stored inside metadata/ 
 FOLDER_NAME_MURI="metadata"
-#Number of NFTs to mint
+#EXAMPLE Number of NFTs to mint 
 NUM=9     
-#Royalty (420=4.20%)
+#EXAMPLE Royalty (420=4.20%) 
 ROYALTY=420  
-#example
-FINGERPRINT=""
-#your nft wallet's ID
+#EXAMPLE example
+FINGERPRINT="1518460169"
+#EXAMPLE your nft wallet's ID
 WALLET_ID=12
-#receive address for the royalties 
-ROYALTY_ADDRESS=""   
-#receive address which the NFTs get sent to after minting 
-RECEIVE_ADDRESS=""
-#fee for every mint (0.0000615 XCH per NFT)
+#EXAMPLE receive address for the royalties 
+ROYALTY_ADDRESS="txch1zgyhkjf90ducz0y35fsxsx48cc0k6zjzcpyj5zj0g0v8una6f9us6xg62l"   
+#EXAMPLE receive address which the NFTs get sent to after minting 
+RECEIVE_ADDRESS="txch1zgyhkjf90ducz0y35fsxsx48cc0k6zjzcpyj5zj0g0v8una6f9us6xg62l"
+#EXAMPLE fee for every mint (0.0000615 XCH per NFT) 
 FEE=0.000615 
-#example
-API_KEY=""
+#EXAMPLE api_key for nft.storage
+API_KEY="eyJhbG......."
 
 ###  DO NOT TOUCH SCRIPT AFTER THIS LINE ### 
 ############################################
