@@ -36,7 +36,7 @@ API_KEY="eyJhbG......."
 
 for i in $(seq 1 $NUM); do
 #uploads images onto nft.storage
-response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_URI/$IMAGE_NAME$i.$IMAGE_SUFFIX" --stderr -);
+response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_URI/$IMAGE_PREFIX$i.$IMAGE_SUFFIX" --stderr -);
 cid1=`echo $response1 | jq -r '.value.cid'`
 URI1="https://${cid1}.ipfs.nftstorage.link" &&
 
@@ -46,7 +46,7 @@ cid2=`echo $response2 | jq -r '.value.cid'`
 URI2="https://${cid2}.ipfs.nftstorage.link" &&
 
 #hashes files (locally stored / online stored)
-sample1_URI=$(sha256sum -b $FOLDER_NAME_URI/$IMAGE_NAME$i.$IMAGE_SUFFIX | cut -c -64) &&
+sample1_URI=$(sha256sum -b $FOLDER_NAME_URI/$IMAGE_PREFIX$i.$IMAGE_SUFFIX | cut -c -64) &&
 sample2_URI=$(curl -s https://${cid1}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
 sample1_MURI=$(sha256sum -b $FOLDER_NAME_MURI/$METADATA_PREFIX$i.$METADATA_SUFFIX | cut -c -64) &&
 sample2_MURI=$(curl -s https://${cid2}.ipfs.nftstorage.link | sha256sum | cut -c -64) &&
