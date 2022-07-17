@@ -69,12 +69,14 @@ case $yn in
         * ) echo exiting...; sudo rm *.txt; exit 1;;
 esac
 
+
+#minting to the blockchain
+for i in $(seq 1 $NUM); do echo $(tput setaf 7)"MINTING $i ...";
 u=$(sed -n ${i}p table_URI.txt);
 nh=$(sed -n ${i}p hashtable_URI.txt);
 mu=$(sed -n ${i}p table_MURI.txt);
 mh=$(sed -n ${i}p hashtable_MURI.txt);
-#minting to the blockchain
-for i in $(seq 1 $NUM); do echo $(tput setaf 7)"MINTING $i ...";
+
 echo "RUNNING: $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $u -nh $nh -mu $mu -mh $mh -rp $ROYALTY -m $FEE"
 echo "IF SOMETHING SEEMS WRONG; HIT CTRL+C"; sleep 5
 chia wallet nft mint -f $FINGERPRINT -i $WALLET_ID -ra $ROYALTY_ADDRESS -ta $RECEIVE_ADDRESS -u $u -nh $nh -mu $mu -mh $mh -rp $ROYALTY -m $FEE &&
