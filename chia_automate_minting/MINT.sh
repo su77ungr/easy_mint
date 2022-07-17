@@ -30,12 +30,12 @@ API_KEY=""
 
 for i in $(seq 1 $NUM); do
 #uploads images onto nft.storage
-response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES" --stderr -);
+response1=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_URI/$i.$FILE_TYPE_OF_IMAGES" --stderr -) &&
 cid1=`echo $response1 | jq -r '.value.cid'`
 URI1="https://${cid1}.ipfs.nftstorage.link" &&
 
 #uploads metadata onto nft.storage
-response2=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_MURI/$i.json" --stderr -);
+response2=$(curl -s -X POST https://api.nft.storage/upload -H "accept: application/json" -H "Content-Type: image/*" -H "Authorization: Bearer $API_KEY" --data-binary "@./$FOLDER_NAME_MURI/$i.json" --stderr -) &&
 cid2=`echo $response2 | jq -r '.value.cid'`
 URI2="https://${cid2}.ipfs.nftstorage.link" &&
 
